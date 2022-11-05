@@ -1,6 +1,12 @@
-class QrResults {
+import 'package:hive_flutter/hive_flutter.dart';
+part 'qr_model.g.dart';
+
+@HiveType(typeId: 0)
+class QrResults extends HiveObject {
+  @HiveField(0)
   final String? code;
-  final String? format;
+  @HiveField(1)
+  late final String? format;
 
   QrResults({this.code, this.format});
 
